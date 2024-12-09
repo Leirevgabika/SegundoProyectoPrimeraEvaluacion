@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Caza del tesoro</title>
+        <link href="./style.css" rel="stylesheet" />
+        <script src="./script.js"></script>
+    </head>
+    <body>
+
+        <!--Seccion de introduccion de datos de usuario-->
+        <div id="datosUsuario">
+            <form onSubmit="event.preventDefault(); iniciarJuego()">
+                <label for="nombre">Introduce tu nombre: </label>
+                <input type="text" id="nombre" name="nombre">
+                <button type="submit">Introducir nombre</button>
+            </form>
+
+            <label id="labelAJugar"></label>
+            <button id="botonJugar" type="button">Jugar</button>
+        </div>
+
+        <!--Seccion de juego-->
+        <div id="areaJuego" style="display: none;">
+            <h1 id="mision">Consigue el tesoro!</h1>
+            <table id="mapa"></table>
+            <br>
+            <label id="marcador"></label>
+            <br>
+            <button id="dado">
+                <span id="valorDado"></span>
+            </button>
+        </div>
+
+    </body>
+</html>
